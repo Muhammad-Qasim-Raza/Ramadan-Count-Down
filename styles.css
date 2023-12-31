@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('./image.jpg') no-repeat center center fixed;
+    font-family: 'Lora', serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    background: rgba(44, 62, 80, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 20vh;
+    margin: 0 auto;
+}
+
+.countdown-item {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.label {
+    font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    #countdown {
+        flex-direction: column;
+    }
+
+    .countdown-item {
+        margin: 5px 0;
+    }
+
+    #countdown {
+        width: 50vw;
+        height: auto;
+    }
+}
